@@ -5,18 +5,9 @@ option java_outer_classname = "UserPBO";
 
 option optimize_for = SPEED;
 
-message Membership {
-  enum Type {
-    REGULAR = 0;
-    PRO = 1;
-  }
-  required bool active = 1;
-  optional Type type = 2 [default = REGULAR];
-}
 
 message User {
   required uint32 id = 1;
   optional string name = 2;
   repeated string email = 3;
-  optional Membership membership = 4;
 }

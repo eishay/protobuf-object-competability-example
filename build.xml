@@ -1,4 +1,4 @@
-<project name="Thrift, ProtoBuf comparison">
+<project name="protobuf-object-competability-example">
     <target name="prepare">
         <mkdir dir="build" />
     </target>

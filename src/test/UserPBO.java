@@ -7,355 +7,6 @@ public final class UserPBO {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public static final class Membership extends
-      com.google.protobuf.GeneratedMessage {
-    // Use Membership.newBuilder() to construct.
-    private Membership() {}
-    
-    private static final Membership defaultInstance = new Membership();
-    public static Membership getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public Membership getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return test.UserPBO.internal_static_test_Membership_descriptor;
-    }
-    
-    @Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return test.UserPBO.internal_static_test_Membership_fieldAccessorTable;
-    }
-    
-    public static enum Type {
-      REGULAR(0, 0),
-      PRO(1, 1),
-      ;
-      
-      
-      public final int getNumber() { return value; }
-      
-      public static Type valueOf(int value) {
-        switch (value) {
-          case 0: return REGULAR;
-          case 1: return PRO;
-          default: return null;
-        }
-      }
-      
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return test.UserPBO.Membership.getDescriptor().getEnumTypes().get(0);
-      }
-      
-      private static final Type[] VALUES = {
-        REGULAR, PRO, 
-      };
-      public static Type valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        return VALUES[desc.getIndex()];
-      }
-      private final int index;
-      private final int value;
-      private Type(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-      
-      static {
-        test.UserPBO.getDescriptor();
-      }
-    }
-    
-    // required bool active = 1;
-    private boolean hasActive;
-    private boolean active_ = false;
-    public boolean hasActive() { return hasActive; }
-    public boolean getActive() { return active_; }
-    
-    // optional .test.Membership.Type type = 2 [default = REGULAR];
-    private boolean hasType;
-    private test.UserPBO.Membership.Type type_ = test.UserPBO.Membership.Type.REGULAR;
-    public boolean hasType() { return hasType; }
-    public test.UserPBO.Membership.Type getType() { return type_; }
-    
-    @Override
-    public final boolean isInitialized() {
-      if (!hasActive) return false;
-      return true;
-    }
-    
-    @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (hasActive()) {
-        output.writeBool(1, getActive());
-      }
-      if (hasType()) {
-        output.writeEnum(2, getType().getNumber());
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    @Override
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (hasActive()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, getActive());
-      }
-      if (hasType()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, getType().getNumber());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    public static test.UserPBO.Membership parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static test.UserPBO.Membership parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistry extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static test.UserPBO.Membership parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static test.UserPBO.Membership parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistry extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static test.UserPBO.Membership parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static test.UserPBO.Membership parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistry extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static test.UserPBO.Membership parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static test.UserPBO.Membership parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistry extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return new Builder(); }
-    public Builder newBuilderForType() { return new Builder(); }
-    public static Builder newBuilder(test.UserPBO.Membership prototype) {
-      return new Builder().mergeFrom(prototype);
-    }
-    
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      // Construct using test.UserPBO.Membership.newBuilder()
-      private Builder() {}
-      
-      test.UserPBO.Membership result = new test.UserPBO.Membership();
-      
-      @Override
-      protected test.UserPBO.Membership internalGetResult() {
-        return result;
-      }
-      
-      @Override
-      public Builder clear() {
-        result = new test.UserPBO.Membership();
-        return this;
-      }
-      
-      @Override
-      public Builder clone() {
-        return new Builder().mergeFrom(result);
-      }
-      
-      @Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return test.UserPBO.Membership.getDescriptor();
-      }
-      
-      public test.UserPBO.Membership getDefaultInstanceForType() {
-        return test.UserPBO.Membership.getDefaultInstance();
-      }
-      
-      public test.UserPBO.Membership build() {
-        if (!isInitialized()) {
-          throw new com.google.protobuf.UninitializedMessageException(
-            result);
-        }
-        return buildPartial();
-      }
-      
-      private test.UserPBO.Membership buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        if (!isInitialized()) {
-          throw new com.google.protobuf.UninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return buildPartial();
-      }
-      
-      public test.UserPBO.Membership buildPartial() {
-        test.UserPBO.Membership returnMe = result;
-        result = null;
-        return returnMe;
-      }
-      
-      @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof test.UserPBO.Membership) {
-          return mergeFrom((test.UserPBO.Membership)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(test.UserPBO.Membership other) {
-        if (other == test.UserPBO.Membership.getDefaultInstance()) return this;
-        if (other.hasActive()) {
-          setActive(other.getActive());
-        }
-        if (other.hasType()) {
-          setType(other.getType());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      @Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return mergeFrom(input,
-          com.google.protobuf.ExtensionRegistry.getEmptyRegistry());
-      }
-      
-      @Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistry extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              setActive(input.readBool());
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-              test.UserPBO.Membership.Type value = test.UserPBO.Membership.Type.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(2, rawValue);
-              } else {
-                setType(value);
-              }
-              break;
-            }
-          }
-        }
-      }
-      
-      
-      // required bool active = 1;
-      public boolean hasActive() {
-        return result.hasActive();
-      }
-      public boolean getActive() {
-        return result.getActive();
-      }
-      public Builder setActive(boolean value) {
-        result.hasActive = true;
-        result.active_ = value;
-        return this;
-      }
-      public Builder clearActive() {
-        result.hasActive = false;
-        result.active_ = false;
-        return this;
-      }
-      
-      // optional .test.Membership.Type type = 2 [default = REGULAR];
-      public boolean hasType() {
-        return result.hasType();
-      }
-      public test.UserPBO.Membership.Type getType() {
-        return result.getType();
-      }
-      public Builder setType(test.UserPBO.Membership.Type value) {
-        result.hasType = true;
-        result.type_ = value;
-        return this;
-      }
-      public Builder clearType() {
-        result.hasType = false;
-        result.type_ = test.UserPBO.Membership.Type.REGULAR;
-        return this;
-      }
-    }
-    
-    static {
-      test.UserPBO.getDescriptor();
-    }
-  }
-  
   public static final class User extends
       com.google.protobuf.GeneratedMessage {
     // Use User.newBuilder() to construct.
@@ -393,18 +44,20 @@ public final class UserPBO {
     public boolean hasName() { return hasName; }
     public java.lang.String getName() { return name_; }
     
-    // optional .test.Membership membership = 4;
-    private boolean hasMembership;
-    private test.UserPBO.Membership membership_ = test.UserPBO.Membership.getDefaultInstance();
-    public boolean hasMembership() { return hasMembership; }
-    public test.UserPBO.Membership getMembership() { return membership_; }
+    // repeated string email = 3;
+    private java.util.List<java.lang.String> email_ =
+      java.util.Collections.emptyList();
+    public java.util.List<java.lang.String> getEmailList() {
+      return email_;
+    }
+    public int getEmailCount() { return email_.size(); }
+    public java.lang.String getEmail(int index) {
+      return email_.get(index);
+    }
     
     @Override
     public final boolean isInitialized() {
       if (!hasId) return false;
-      if (hasMembership()) {
-        if (!getMembership().isInitialized()) return false;
-      }
       return true;
     }
     
@@ -417,8 +70,8 @@ public final class UserPBO {
       if (hasName()) {
         output.writeString(2, getName());
       }
-      if (hasMembership()) {
-        output.writeMessage(4, getMembership());
+      for (java.lang.String element : getEmailList()) {
+        output.writeString(3, element);
       }
       getUnknownFields().writeTo(output);
     }
@@ -438,9 +91,9 @@ public final class UserPBO {
         size += com.google.protobuf.CodedOutputStream
           .computeStringSize(2, getName());
       }
-      if (hasMembership()) {
+      for (java.lang.String element : getEmailList()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getMembership());
+          .computeStringSize(3, element);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -551,6 +204,10 @@ public final class UserPBO {
       }
       
       public test.UserPBO.User buildPartial() {
+        if (result.email_ != java.util.Collections.EMPTY_LIST) {
+          result.email_ =
+            java.util.Collections.unmodifiableList(result.email_);
+        }
         test.UserPBO.User returnMe = result;
         result = null;
         return returnMe;
@@ -574,8 +231,11 @@ public final class UserPBO {
         if (other.hasName()) {
           setName(other.getName());
         }
-        if (other.hasMembership()) {
-          mergeMembership(other.getMembership());
+        if (!other.email_.isEmpty()) {
+          if (result.email_.isEmpty()) {
+            result.email_ = new java.util.ArrayList<java.lang.String>();
+          }
+          result.email_.addAll(other.email_);
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -619,13 +279,8 @@ public final class UserPBO {
               setName(input.readString());
               break;
             }
-            case 34: {
-              test.UserPBO.Membership.Builder subBuilder = test.UserPBO.Membership.newBuilder();
-              if (hasMembership()) {
-                subBuilder.mergeFrom(getMembership());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setMembership(subBuilder.buildPartial());
+            case 26: {
+              addEmail(input.readString());
               break;
             }
           }
@@ -669,37 +324,37 @@ public final class UserPBO {
         return this;
       }
       
-      // optional .test.Membership membership = 4;
-      public boolean hasMembership() {
-        return result.hasMembership();
+      // repeated string email = 3;
+      public java.util.List<java.lang.String> getEmailList() {
+        return java.util.Collections.unmodifiableList(result.email_);
       }
-      public test.UserPBO.Membership getMembership() {
-        return result.getMembership();
+      public int getEmailCount() {
+        return result.getEmailCount();
       }
-      public Builder setMembership(test.UserPBO.Membership value) {
-        result.hasMembership = true;
-        result.membership_ = value;
+      public java.lang.String getEmail(int index) {
+        return result.getEmail(index);
+      }
+      public Builder setEmail(int index, java.lang.String value) {
+        result.email_.set(index, value);
         return this;
       }
-      public Builder setMembership(test.UserPBO.Membership.Builder builderForValue) {
-        result.hasMembership = true;
-        result.membership_ = builderForValue.build();
-        return this;
-      }
-      public Builder mergeMembership(test.UserPBO.Membership value) {
-        if (result.hasMembership() &&
-            result.membership_ != test.UserPBO.Membership.getDefaultInstance()) {
-          result.membership_ =
-            test.UserPBO.Membership.newBuilder(result.membership_).mergeFrom(value).buildPartial();
-        } else {
-          result.membership_ = value;
+      public Builder addEmail(java.lang.String value) {
+        if (result.email_.isEmpty()) {
+          result.email_ = new java.util.ArrayList<java.lang.String>();
         }
-        result.hasMembership = true;
+        result.email_.add(value);
         return this;
       }
-      public Builder clearMembership() {
-        result.hasMembership = false;
-        result.membership_ = test.UserPBO.Membership.getDefaultInstance();
+      public Builder addAllEmail(
+          java.lang.Iterable<? extends java.lang.String> values) {
+        if (result.email_.isEmpty()) {
+          result.email_ = new java.util.ArrayList<java.lang.String>();
+        }
+        super.addAll(values, result.email_);
+        return this;
+      }
+      public Builder clearEmail() {
+        result.email_ = java.util.Collections.emptyList();
         return this;
       }
     }
@@ -709,11 +364,6 @@ public final class UserPBO {
     }
   }
   
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_test_Membership_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_test_Membership_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_test_User_descriptor;
   private static
@@ -728,31 +378,20 @@ public final class UserPBO {
       descriptor;
   static {
     java.lang.String descriptorData =
-      "\n\nuser.proto\022\004test\"h\n\nMembership\022\016\n\006acti" +
-      "ve\030\001 \002(\010\022,\n\004type\030\002 \001(\0162\025.test.Membership" +
-      ".Type:\007REGULAR\"\034\n\004Type\022\013\n\007REGULAR\020\000\022\007\n\003P" +
-      "RO\020\001\"F\n\004User\022\n\n\002id\030\001 \002(\r\022\014\n\004name\030\002 \001(\t\022$" +
-      "\n\nmembership\030\004 \001(\0132\020.test.MembershipB\021\n\004" +
+      "\n\023protobuf/user.proto\022\004test\"/\n\004User\022\n\n\002i" +
+      "d\030\001 \002(\r\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \003(\tB\021\n\004" +
       "testB\007UserPBOH\001";
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_test_Membership_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_test_Membership_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_test_Membership_descriptor,
-              new java.lang.String[] { "Active", "Type", },
-              test.UserPBO.Membership.class,
-              test.UserPBO.Membership.Builder.class);
           internal_static_test_User_descriptor =
-            getDescriptor().getMessageTypes().get(1);
+            getDescriptor().getMessageTypes().get(0);
           internal_static_test_User_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_test_User_descriptor,
-              new java.lang.String[] { "Id", "Name", "Membership", },
+              new java.lang.String[] { "Id", "Name", "Email", },
               test.UserPBO.User.class,
               test.UserPBO.User.Builder.class);
           return null;
