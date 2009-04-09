@@ -1,0 +1,7 @@
+import voldemort._import test.UserPBO._val vclient = new VClient[String, User] ("proto-store", "tcp://localhost:6666")val user = User.newBuilder.setId(1).setName("Joe Smith").addEmail("joe@gmail.com").addEmail("joe2@yahoo.com").buildvclient put (user getId toString, user)-----do remote...-----val user2 = vclient get "1"  remote:import voldemort._import test.UserPBO._val vclient = new VClient[String, User] ("proto-store", "tcp://localhost:6666")val user = vclient get "1"val newUser = User.newBuilder(user).setMembership(Membership.newBuilder.setActive(true).setType(Membership.Type.PRO).build).buildvclient put (newUser.getId.toString, newUser)      ===============================================
+
+By Eishay Smith
+eishay@gmail.com
+http://www.eishay.com
+
+

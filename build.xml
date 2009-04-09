@@ -1,0 +1,15 @@
+<project name="Thrift, ProtoBuf comparison">
+    <target name="prepare">
+        <mkdir dir="build" />
+    </target>
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile" depends="prepare">
+        <javac srcdir="src" destdir="build" classpath="lib">
+          <classpath><fileset dir="lib" /> </classpath>
+        </javac>
+    </target>
+</project>
+
